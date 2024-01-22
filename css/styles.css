@@ -1,14 +1,16 @@
-
 .bg-image{
     height: 100vh;
     width: 100vw;
     object-fit: cover;
     filter: blur(5px);
-    /* fixes navbar along background */
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    border:#f7f7f7;
+    border-width: 10px;
+    height: auto;
+    display: block;
 }
 
 .container{
@@ -24,7 +26,7 @@
 }
 
 .navbar-brand{
-    font-family: "Comic Sans MS";
+    font-family: "Black Han Sans";
 }
 
 .da-linkedin svg {
@@ -42,9 +44,7 @@
     transform: scale(1.2); 
 }
 
-
 .navbar-buttons {
-    font-family: "Comic Sans MS";
     color:#f7f7f7;
     font-size: 17px;
     padding: 10px 20px;
@@ -52,7 +52,16 @@
 }
 
 .navbar-buttons .nav-link:hover {
-    color: #ff0000 !important; /* Change to the color you want on hover ; /* Change to the color you want on hover */
+    color: #ff0000 !important; 
+}
+
+.projects-item {
+    background-color: rgb(63, 66, 65);
+    color: #f7f7f7;
+    border: 2px solid rgb(84, 87, 86);
+    border-radius: 5px 5px; 
+    font-size: 17px;
+    font-family: 'Black Han Sans';
 }
 
 body {
@@ -78,6 +87,17 @@ body {
     border-width: 11px;
 }
 
+.text-center{
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
 .bio-container {
     display: flex;
     flex-direction: column;
@@ -88,9 +108,41 @@ body {
 .bio-name {
     margin-top: 5%;
     color: #f7f7f7;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Black Han Sans', sans-serif;
     text-align: center;
     font-size: 2.3em;
+    white-space: nowrap; 
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-pic {
+        width: 150px; 
+        height: 150px; 
+    }
+
+    .bio-name {
+        font-size: 1.5em; 
+    }
+
+    .bio-goals {
+        font-size: 1.2em; 
+    }
+}
+
+/* For devices smaller than 900px */
+@media only screen and (max-width: 900px) {
+    .profile-pic {
+        width: 200px; 
+        height: 200px; 
+    }
+
+    .bio-name {
+        font-size: 1.8em; 
+    }
+
+    .bio-goals {
+        font-size: 1.5em; 
+    }
 }
 
 .highlight-name {
@@ -103,7 +155,7 @@ body {
 
 .bio-goals {
     color: #f7f7f7;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Black Han Sans', sans-serif;
     text-align: center;
     margin-left: 23%; 
     margin-right: 23%;
